@@ -1,0 +1,189 @@
+
+:root{
+    --color-1: #121826;
+    --color-2: #E5E7EB;
+    --color-3: #FFFFFF;
+    --color-4: #3662E3;
+    --color-5: #F8FAFC;
+    --color-6: #4D5562;
+    --color-7: #E9A23B;
+    --color-8: #4D556233;
+
+}
+
+h1, p, h3{
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Be Vietnam Pro", system-ui;
+
+}
+
+header{
+    width: 100%;
+    height: 20dvh;
+    background-color: var(--color-2);
+    background-image: url(src/sand-background-image@2x.png) ;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1{
+    font-style: Bold;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+header p{
+    max-width: 50% ;
+    font-style: Regular;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-rows: 1fr repeat(9, 50px);
+    grid-template-columns: 170px repeat(4, 180px);
+    margin: 20px;
+}   
+
+.grid-container div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    
+}
+
+.grid-container .fila10{
+    flex-direction: row;
+}
+
+.fila2, .fila3, .fila4, .fila5, .fila6, .fila7, .fila8, .fila9{
+    border-bottom: 2px solid var(--color-8);
+}
+
+.fila1 h3{
+    font-size: 4rem;
+}
+
+#fila1-3 p:first-of-type {
+    background-color: var(--color-4);
+    color: var(--color-2);
+}
+
+.fila1 p:first-of-type {
+    border-radius: 20px;
+    padding: 5px;
+    color: var(--color-4);
+}
+
+#fila1-1{
+    grid-column: 2; 
+}
+
+#fila10-1{
+    grid-column: 2;
+}
+
+#fila2-1{
+    border-radius: 20px 0 0 0;
+}
+
+#fila9-1{
+    border-radius: 0 0 0 20px;
+}
+
+.columna1{
+    background-color: var(--color-3);
+}
+
+.columna4{
+    background-color: var(--color-1);
+}
+
+.columna4 h3{
+    color: var(--color-2);
+}
+
+.columna4 p{
+    color: var(--color-3);
+}
+
+#fila1-3{
+    border-radius: 20px 20px 0 0;
+}
+
+#fila10-3{
+    border-radius: 0 0 20px 20px ;
+}
+
+#fila10-3{
+    background-color: var(--color-7);
+}
+
+
+@media (max-width: 1024px ) {
+    section .columna2 {
+        display: none;
+    }
+    
+    main .grid-container{
+        grid-template-rows: 1fr repeat(9, 50px);
+        grid-template-columns: 170px repeat(3, 180px);
+    }   
+    
+    main #fila1-2{
+        grid-column: 2; 
+    }
+    
+    main #fila10-2{
+        grid-column: 2;
+    }
+    
+}
+
+@media (max-width: 640px) {
+    
+    
+    main .grid-container{
+        grid-template-rows: 1fr repeat(9, 50px);
+        grid-template-columns: 170px repeat(2, 180px);
+    }   
+    
+    
+    section .columna2 {
+        display: none;
+    }
+    section .columna3 {
+        display: none;
+    }
+    
+    main #fila1-3{
+        grid-column: 2; 
+    }
+    
+    main #fila10-3{
+        grid-column: 2;
+    }
+
+}
